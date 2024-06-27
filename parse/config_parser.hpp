@@ -86,6 +86,7 @@ namespace config {
 #ifdef DEBUG
                 std::print("{0} = ", line);
 #endif
+                line = replaceString(line, " ", "");
                 line = replaceString(line, "\n", "");
                 if(this->symbol_map.contains(line)) {
                     this->symbol_map[line](line, config);
